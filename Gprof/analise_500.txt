@@ -1,0 +1,48 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 24.08      5.18     5.18                             PLS::MultiplyTransposeMatrixbyVector(Matriz*, Vetor*, Vetor*)
+ 22.17      9.95     4.77                             PLS::MultiplyMatrixbyVector(Matriz*, Vetor*, Vetor*)
+ 19.36     14.12     4.17                             Matriz::PegaElementoMatriz(int, int)
+ 11.04     16.50     2.38                             Matriz::AtribuiElementoMatriz(int, int, float)
+  7.76     18.17     1.67                             Matriz::PegaNumeroLinhas() const
+  5.67     19.39     1.22                             MultiplicaMatrizes(Matriz*, Matriz*)
+  4.46     20.35     0.96                             MatrizInversa(Matriz*)
+  2.42     20.87     0.52                             PLS::SubtractFromMatrix(Matriz*, Vetor*, Vetor*)
+  1.26     21.14     0.27                             Matriz::CopiaColuna(int)
+  1.07     21.37     0.23                             Matriz::~Matriz()
+  0.26     21.42     0.06                             Vetor::PegaElementoVetor(int)
+  0.23     21.47     0.05                             PLS::normaliz(Vetor*, Vetor*)
+  0.09     21.49     0.02                             PLS::runpls(Matriz*, Vetor*, int, char*, float, float)
+  0.07     21.51     0.02                             Vetor::PegaDadosVetor()
+  0.05     21.52     0.01                             Matriz::Matriz(int, int)
+  0.05     21.53     0.01                             Vetor::PegaTamanhoVetor() const
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
