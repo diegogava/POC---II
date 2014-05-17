@@ -40,11 +40,12 @@ int main(int argc, char** argv) {
 
 
 
-    X = new Matrix ("Input_data/file_matrix_10");
-    Y = new Vector ("Input_data/file_vector_10");
+    X = new Matrix ("Input_data/file_matrix_50");
+    Y = new Vector ("Input_data/file_vector_50");
+
     P = new PLS();
 
-    P->runpls(X,Y,10,NULL);
+    P->runpls(X,Y,50,NULL);
 
     delete X;
     delete Y;

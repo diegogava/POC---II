@@ -42,7 +42,7 @@ void PLS::MultiplyTransposeMatrixbyVector(Matrix *M, Vector *v, Vector *retvecto
 
     for (i = 0; i < (int) M->GetNumberColumns(); i++) {
 
-        ptM = M->CopyColumn(i);
+        ptM = M->GetColumn(i);
         ptret[i] = 0;
 
         for (j = 0; j < M->GetNumberRows(); j++) {
@@ -63,7 +63,7 @@ void PLS::MultiplyMatrixbyVector(Matrix *M, Vector *v, Vector *retvector) {
     ptret = retvector->GetDataVector();
 
     for (i = 0; i < M->GetNumberColumns(); i++) {
-        ptM = M->CopyColumn(i);
+        ptM = M->GetColumn(i);
         for (j = 0; j < M->GetNumberRows(); j++) {
             ptret[j] += ptM[j] * ptv[i];
         }
@@ -109,8 +109,8 @@ void PLS::SubtractFromMatrix(Matrix *M, Vector *t, Vector *p) {
 
     // Xres=Xres-t*p';
 
-    for (j=0;j<M->GetNumberColumns();j++) {
-        ptM = M->CopyColumn(j);
+    for (j = 0;j < M->GetNumberColumns();j++) {
+        ptM = M->GetColumn(j);
         for (i = 0; i < M->GetNumberRows(); i++) {
             ptM[i] = ptM[i] - (ptt[i] * ptp[j]);
         }
@@ -145,7 +145,7 @@ void PLS::mean(Matrix *M, Vector *retvector) {
     retvector->ResetVector();
     ptv = retvector->GetDataVector();
     for (j = 0; j < M->GetNumberColumns(); j++) {
-        ptM = M->CopyColumn(j);
+        ptM = M->GetColumn(j);
         for (i = 0; i < M->GetNumberRows(); i++) {
             ptv[j] += ptM[i];
         }
@@ -185,7 +185,7 @@ void PLS::std(Matrix *M, Vector *mean, Vector *retvector) {
     ptmean = mean->GetDataVector();
 
     for (j = 0; j < M->GetNumberColumns(); j++) {
-        ptM = M->CopyColumn(j);
+        ptM = M->GetColumn(j);
         for (i = 0; i < M->GetNumberRows(); i++) {
             ptret[j] += (ptM[i] - ptmean[j]) * (ptM[i] - ptmean[j]);
         }
@@ -234,14 +234,14 @@ void PLS::zscore(Matrix *M, Vector *mean, Vector *std) {
     ptstd = std->GetDataVector();
 
     for(j = 0; j < M->GetNumberColumns(); j++){
-        ptM = M->CopyColumn(j);
+        ptM = M->GetColumn(j);
         for (i = 0; i < M->GetNumberRows(); i++) {
             ptM[i] = (ptM[i] - ptmean[j]) / ptstd[j];
         }
     }
 }
 
-
+/* Wstar = W * inv(P' * W); */
 void PLS::ComputeWstar() {
 
     Matrix *tmp1, *tmp2, *tmp3;
@@ -298,6 +298,7 @@ void PLS::runpls(Matrix *X, Vector *Y, int nfactor, char *OutputDir, float Expla
 
     Yorig = new Vector (nsamples);
     CopyVector(Y, Yorig);
+
     maxsteps = 100;
 
     Xmean = new Vector(nfeatures);
@@ -324,14 +325,12 @@ void PLS::runpls(Matrix *X, Vector *Y, int nfactor, char *OutputDir, float Expla
     std(Y, ymean, ystd);
     zscore(Y, ymean, ystd);
 
-
-    C = new Vector (nfactor);
     T = new Matrix (nsamples, nfactor);
     U = new Matrix (nsamples, nfactor);
     P = new Matrix (nfeatures, nfactor);
     W = new Matrix (nfeatures, nfactor);
     b = new Vector (nfactor);
-
+    C = new Vector (nfactor);
 
     t = new Vector (nsamples);
     u = new Vector (nsamples);
@@ -415,7 +414,7 @@ void PLS::runpls(Matrix *X, Vector *Y, int nfactor, char *OutputDir, float Expla
         percX = 0;
         percY = 0;
         percAux = 0;
-
+#if 0
         for (j = 0; j < T->GetNumberRows(); j++) {
             percAux += (double) (T->GetElementMatrix(i, j) * T->GetElementMatrix(i, j));
         }
@@ -440,16 +439,16 @@ void PLS::runpls(Matrix *X, Vector *Y, int nfactor, char *OutputDir, float Expla
             nfactor = i + 1;
             break;
         }
-
+#endif
      }
 
+    //printf("nfactor = %d\n",nfactor);
     // saving only number of factors actually used
     for (i = 0; i < nfactor; i++) {
         selectedCols.push_back(i);
     }
 
-
-    tmpM = T->GetSelectedCols(&selectedCols); // implementar!!!!
+    tmpM = T->GetSelectedCols(&selectedCols);
     delete T;
     T = tmpM;
 
@@ -465,8 +464,8 @@ void PLS::runpls(Matrix *X, Vector *Y, int nfactor, char *OutputDir, float Expla
     delete b;
     b = tmpV;
 
-
     ComputeWstar();
+
 
     /* Cria um vetor auxiliar para zscore. */
     zdataV = new Vector (Wstar->GetNumberRows());
@@ -486,6 +485,7 @@ void PLS::runpls(Matrix *X, Vector *Y, int nfactor, char *OutputDir, float Expla
     delete ymean;
     delete ystd;
     delete t;
+
 }
 
 
@@ -501,6 +501,7 @@ PLS::PLS() {
     Wstar = NULL;
     zdataV = NULL;
     maxFactors = -1;
+
 }
 
 
@@ -654,7 +655,7 @@ void PLS::Projection(Vector *feat, Vector *retproj, int nfactors) {
     ZscoreSSE(feat->GetDataVector(), Xmean->GetDataVector(), Xstd->GetDataVector(), zdataV->GetDataVector(), Wstar->GetNumberRows());
 
     for (i = 0; i < nfactors; i++) {
-        retproj->v[i] = DotProductSSENotMultof4(zdataV->GetDataVector(), Wstar->CopyColumn(i), Wstar->GetNumberRows());
+        retproj->v[i] = DotProductSSENotMultof4(zdataV->GetDataVector(), Wstar->GetColumn(i), Wstar->GetNumberRows());
     }
 }
 

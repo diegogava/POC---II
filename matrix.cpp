@@ -3,19 +3,17 @@
 using namespace std;
 
 /* Construtor que recebe por parâmetro a quantidade de linhas e de colunas da matriz, e instancia um objeto do tipo Matrix. */
-Matrix::Matrix(int l,int c){
+Matrix::Matrix(int r,int c){
 
-   rows = l,cols = c;
+    rows = r;
+    cols = c;
+    int i;
 
-   int i;
+     m = (float*)malloc(sizeof(float)*(rows*cols));
 
-   m = (float*) malloc(sizeof(float)* (rows * cols));
+     for(i = 0;i < rows*cols;i++)
+         m[i] = 0;
 
-   for(i=0;i<rows*cols;i++){
-
-       m[i]=0;
-
-   }
 
 }
 
@@ -31,15 +29,15 @@ Matrix::Matrix(char* filename){
        exit(2);
    }
 
-   file >> rows >> cols;
+   file >> this->rows >> this->cols;
 
-   m = (float*) malloc(sizeof(float)*(rows*cols));
+   this->m = (float*) malloc(sizeof(float)*(this->rows*this->cols));
 
-   for(i=0;i<rows; i++){
+   for(i=0;i<this->rows; i++){
 
-       for(j=0;j<cols;j++)
+       for(j=0;j<this->cols;j++)
 
-           file >> m[j*rows +i];
+           file >> this->m[j*this->rows +i];
 
    }
 
@@ -50,44 +48,70 @@ Matrix::Matrix(char* filename){
 /* Destrutor */
 Matrix::~Matrix(){
 
-    delete m;
+    delete this->m;
 
 }
 
 /* Retorna o número de linhas da matriz. */
-int Matrix::GetNumberRows() const{
+int Matrix::GetNumberRows() {
 
-    return rows;
+    return this->rows;
 
 }
 
 /* Retorna o número de colunas da matriz. */
-int Matrix::GetNumberColumns() const{
+int Matrix::GetNumberColumns() {
 
-    return cols;
+    return this->cols;
 
 }
 
-/* Retorna o ponto de ponto flutuante com os dados (elementos de ponto flutuante) da matriz. */
+/* Metodo que retorna o elemento da matriz. */
+float Matrix::GetElementMatrix(int i, int j){
+
+    return this->m[j*this->rows+i];
+
+}
+
+/* Seta o valor de ponto flutuante passado por parametro na linha i e coluna j. */
+void Matrix::SetElementMatrix(int i, int j, float element){
+
+    this->m[j*this->rows+i] = element;
+
+}
+
+/* Retorna o ponteiro de ponto flutuante com os dados (elementos de ponto flutuante) da matriz. */
 float* Matrix::GetDataMatrix(){
 
-    return m;
+    return this->m;
 
 }
+
+/* Obtem a coluna, atraves do seu indice, retornando o ponteiro correspondente. */
+float* Matrix::GetColumn(int index){
+
+    return this->m + this->rows*index;
+
+}
+
 /* Imprime a matriz na tela. */
 void Matrix::PrintScreenMatrix(){
 
     int i,j;
 
+    for(i=0;i<this->rows;i++){
 
-    for(i=0;i<rows;i++){
-        for(j=0;j<cols;j++){
-            cout << GetElementMatrix(i,j) << " ";
+        for(j=0;j<this->cols;j++){
+
+            cout << this->m[i,j] << " ";
+
         }
+
         cout << "\n";
+
     }
 
-  }
+}
 
 /* Imprime a matriz em um arquivo. */
 void Matrix::PrintFileMatrix(char *filename){
@@ -97,46 +121,33 @@ void Matrix::PrintFileMatrix(char *filename){
 
     file.open(filename);
 
-    file << rows << " " << cols << "\n";
+    file << this->rows << " " << this->cols << "\n";
 
     for(i=0;i<rows;i++){
+
         for(j=0;j<cols;j++){
-            file << GetElementMatrix(i,j) << " ";
+
+            file << this->m[i,j] << " ";
+
         }
+
         file << "\n";
+
     }
 
     file.close();
 
 }
 
-float* Matrix::CopyColumn(int index){
-
-    return m + rows*index;
-
-}
-
-float Matrix::GetElementMatrix(int i, int j){
-
-    return m[j*rows+i];
-
-}
-
-float Matrix::SetElementMatrix(int i, int j, float element){
-
-    return m[j*rows+i] = element;
-
-}
-
-
+/* Copia os dados da matriz */
 Matrix* Matrix::CopyMatrix() {
 
     Matrix *m1;
     float *data;
 
-    m1 = new Matrix(rows, cols);
+    m1 = new Matrix(this->rows, this->cols);
     data = m1->GetDataMatrix();
-    memcpy(data, this->GetDataMatrix(), sizeof(float) * rows * cols);
+    memcpy(data, this->GetDataMatrix(), sizeof(float) * this->rows * this->cols);
 
     return m1;
 
@@ -181,6 +192,23 @@ Matrix *Matrix::ConcatenataLinhasMatrizes(Matrix *m1, Matrix *m2) {
         return m_aux;
 }
 
+Matrix* Matrix::GetSelectedCols(vector<int> *selectedcols) {
+
+    Matrix *matrix;
+    int i, j, k;
+
+
+    matrix = new Matrix (this->GetNumberRows(), (int) selectedcols->size());
+
+    for (i = 0; i < (int)selectedcols->size(); i++) {
+        j = selectedcols->at(i);
+        for (k = 0; k < this->GetNumberRows(); k++) {
+            matrix->SetElementMatrix(i, k, this->GetElementMatrix(j, k));
+        }
+    }
+
+    return matrix;
+}
 
 /* Multiplica duas matrizes. */
 Matrix *MultiplyMatrices(Matrix *m1, Matrix *m2){
@@ -366,21 +394,4 @@ int i, n2;
             outputvect[i] = (data[i] - mean[i]) / std[i];
         }
     }
-}
-
-
-Matrix* Matrix::GetSelectedCols(vector<int> *selectedcols) {
-
-    Matrix *matrix;
-    int i, j, k;
-
-    matrix = new Matrix (this->GetNumberRows(), (int) selectedcols->size());
-    for (i = 0; i < (int)selectedcols->size(); i++) {
-        j = selectedcols->at(i);
-        for (k = 0; k < this->GetNumberRows(); k++) {
-            matrix->SetElementMatrix(i, k, this->GetElementMatrix(j, k));
-        }
-    }
-
-    return matrix;
 }

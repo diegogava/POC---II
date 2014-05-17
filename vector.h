@@ -21,7 +21,7 @@ public:
     int n; /* Numero de elementos do vetor. */
 
     /* Metodos */
-    Vector(int n);
+    Vector(int size);
     Vector(char* filename);
     ~Vector();
     Vector* Copy();
@@ -31,7 +31,7 @@ public:
     void PrintScreenVector();
     void PrintFileVector(char *filename);
 
-    int	 GetSizeVector() const;
+    int	 GetSizeVector();
 
     float GetElementVector(int i);
     float* GetDataVector();

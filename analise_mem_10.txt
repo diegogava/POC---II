@@ -1,0 +1,351 @@
+--------------------------------------------------------------------------------
+Command:            ./pls
+Massif arguments:   (none)
+ms_print arguments: massif.out.25353
+--------------------------------------------------------------------------------
+
+
+    KB
+128.9^                                                                       #
+     |                                                                       #
+     |                                                            :::::::::::#
+     |                                                            :          #
+     |                                           ::::::::::::::::::          #
+     |                               @::::::::::::                :          #
+     |                               @           :                :          #
+     |     ::::::::::::::::::::::::::@           :                :          #
+     |     :                         @           :                :          #
+     |     :                         @           :                :          #
+     |     @                         @           :                :          #
+     |     @                         @           :                :          #
+     | @:@@@                         @           :                :          #
+     | @:@@@                         @           :                :          #
+     | @:@@@                         @           :                :          #
+     |:@:@@@                         @           :                :          #
+     |:@:@@@                         @           :                :          #
+     |:@:@@@                         @           :                :          #
+     |:@:@@@                         @           :                :          #
+     |:@:@@@                         @           :                :          #
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   95.06
+
+Number of snapshots: 89
+ Detailed snapshots: [3, 31, 42, 57, 67, 77, 81, 82, 88 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      1,359,371           38,088           38,076            12            0
+  2      1,470,022           38,112           38,092            20            0
+  3      1,514,147           56,976           56,909            67            0
+99.88% (56,909B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.83% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->66.83% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->66.83% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->17.55% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->17.55% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->14.38% (8,192B) 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+| ->14.38% (8,192B) 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|   ->14.38% (8,192B) 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|     ->14.38% (8,192B) 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|       ->14.38% (8,192B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|         
+->01.13% (641B) in 3 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      1,624,430           56,976           56,909            67            0
+  5      1,707,313           56,976           56,909            67            0
+  6      1,824,237           56,976           56,909            67            0
+  7      1,929,897           56,976           56,909            67            0
+  8      1,999,466           56,904           56,852            52            0
+  9      2,094,033           56,976           56,909            67            0
+ 10      2,209,060           56,976           56,909            67            0
+ 11      2,289,719           56,976           56,909            67            0
+ 12      2,398,370           56,976           56,909            67            0
+ 13      2,503,986           56,976           56,909            67            0
+ 14      2,598,771           56,904           56,852            52            0
+ 15      2,697,416           56,976           56,909            67            0
+ 16      2,765,330           56,904           56,852            52            0
+ 17      2,900,552           56,976           56,909            67            0
+ 18      2,983,741           56,904           56,852            52            0
+ 19      3,053,785           56,904           56,852            52            0
+ 20      3,152,790           56,904           56,852            52            0
+ 21      3,243,382           56,976           56,909            67            0
+ 22      3,357,924           56,976           56,909            67            0
+ 23      3,427,615           56,976           56,909            67            0
+ 24      3,542,819           56,976           56,909            67            0
+ 25      3,680,341           56,976           56,909            67            0
+ 26      3,772,684           56,904           56,852            52            0
+ 27      3,840,650           56,904           56,852            52            0
+ 28      3,953,695           56,904           56,852            52            0
+ 29      4,043,684           56,976           56,909            67            0
+ 30      4,111,598           56,904           56,852            52            0
+ 31      4,201,897           56,904           56,852            52            0
+99.91% (56,852B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.91% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->66.91% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->66.91% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->17.57% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->17.57% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->14.40% (8,192B) 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+| ->14.40% (8,192B) 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|   ->14.40% (8,192B) 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|     ->14.40% (8,192B) 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|       ->14.40% (8,192B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|         
+->01.03% (584B) in 3 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32      4,319,598           56,976           56,909            67            0
+ 33      4,393,643           56,904           56,852            52            0
+ 34      4,503,785           56,904           56,852            52            0
+ 35      4,576,275           56,904           56,852            52            0
+ 36      4,686,261           56,904           56,852            52            0
+ 37      4,758,460           56,976           56,909            67            0
+ 38      4,868,247           56,976           56,909            67            0
+ 39      4,942,097           56,904           56,852            52            0
+ 40      5,050,422           56,904           56,852            52            0
+ 41      5,122,827           56,904           56,852            52            0
+ 42      5,267,077           56,904           56,852            52            0
+99.91% (56,852B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.91% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->66.91% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->66.91% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->17.57% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->17.57% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->14.40% (8,192B) 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+| ->14.40% (8,192B) 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|   ->14.40% (8,192B) 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|     ->14.40% (8,192B) 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|       ->14.40% (8,192B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|         
+->01.03% (584B) in 3 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43      5,411,580           56,976           56,909            67            0
+ 44      5,521,548           56,904           56,852            52            0
+ 45      5,595,458           56,904           56,852            52            0
+ 46      5,739,492           56,976           56,909            67            0
+ 47      5,883,963           56,904           56,852            52            0
+ 48      5,956,546           56,904           56,852            52            0
+ 49      6,064,930           56,904           56,852            52            0
+ 50      6,109,881           56,904           56,852            52            0
+ 51      6,154,947           56,904           56,852            52            0
+ 52      6,199,859           56,904           56,852            52            0
+ 53      6,244,944           56,904           56,852            52            0
+ 54      6,290,041           56,904           56,852            52            0
+ 55      6,334,855           56,904           56,852            52            0
+ 56      6,379,788           56,904           56,852            52            0
+ 57      6,424,676           56,904           56,852            52            0
+99.91% (56,852B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.91% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->66.91% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->66.91% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->17.57% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->17.57% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->14.40% (8,192B) 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+| ->14.40% (8,192B) 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|   ->14.40% (8,192B) 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|     ->14.40% (8,192B) 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|       ->14.40% (8,192B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|         
+->01.03% (584B) in 3 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58      6,469,881           56,904           56,852            52            0
+ 59      6,514,799           56,904           56,852            52            0
+ 60      6,560,016           56,904           56,852            52            0
+ 61      6,605,063           56,904           56,852            52            0
+ 62      6,650,269           56,904           56,852            52            0
+ 63      6,695,137           56,904           56,852            52            0
+ 64      6,740,409           56,904           56,852            52            0
+ 65      6,785,335           56,904           56,852            52            0
+ 66      6,830,128           56,904           56,852            52            0
+ 67      6,875,144           56,904           56,852            52            0
+99.91% (56,852B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.91% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->66.91% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->66.91% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->17.57% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->17.57% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->14.40% (8,192B) 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+| ->14.40% (8,192B) 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|   ->14.40% (8,192B) 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+|     ->14.40% (8,192B) 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|       ->14.40% (8,192B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|         
+->01.03% (584B) in 3 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 68      6,920,073           56,904           56,852            52            0
+ 69      6,964,949           56,904           56,852            52            0
+ 70      7,009,889           56,904           56,852            52            0
+ 71      7,055,160           56,904           56,852            52            0
+ 72      7,100,269           56,904           56,852            52            0
+ 73      7,149,754           48,704           48,660            44            0
+ 74      7,193,941           57,216           57,125            91            0
+ 75      7,567,541           49,192           49,052           140            0
+ 76      7,618,178           59,336           59,108           228            0
+ 77      7,663,284           69,368           69,124           244            0
+99.65% (69,124B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->54.89% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->54.89% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->54.89% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->28.83% (20,000B) 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->14.42% (10,000B) 0x4043DE: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->14.42% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->14.42% (10,000B) 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->14.42% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|     
+->14.42% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->14.42% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->01.51% (1,048B) in 16 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 78      7,708,391           79,400           79,140           260            0
+ 79      7,753,498           89,432           89,156           276            0
+ 80     43,352,521           91,592           91,088           504            0
+ 81     43,356,446           91,616           91,096           520            0
+99.43% (91,096B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->43.66% (40,000B) 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->10.92% (10,000B) 0x4043DE: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->10.92% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->10.92% (10,000B) 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->10.92% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->10.92% (10,000B) 0x404436: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->10.92% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->10.92% (10,000B) 0x404464: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->10.92% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|     
+->41.56% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->41.56% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->41.56% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->10.92% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->10.92% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->02.63% (2,408B) 0x402CAC: Vector::Vector(int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->02.63% (2,408B) in 14 places, all below massif's threshold (01.00%)
+|   
+->00.67% (612B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 82     43,595,683          101,864          101,356           508            0
+99.50% (101,356B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->49.09% (50,000B) 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->09.82% (10,000B) 0x4043DE: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->09.82% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->09.82% (10,000B) 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->09.82% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->09.82% (10,000B) 0x404436: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->09.82% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->09.82% (10,000B) 0x404464: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->09.82% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->09.82% (10,000B) 0x401E48: Matrix::GetSelectedCols(std::vector<int, std::allocator<int> >*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->09.82% (10,000B) 0x404DF6: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|     ->09.82% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|       
+->37.38% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->37.38% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->37.38% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->09.82% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->09.82% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->02.36% (2,408B) 0x402CAC: Vector::Vector(int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->02.36% (2,408B) in 14 places, all below massif's threshold (01.00%)
+|   
+->00.86% (872B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 83     43,826,039           91,856           91,356           500            0
+ 84     44,056,395           91,856           91,356           500            0
+ 85     44,289,514          101,888          101,372           516            0
+ 86     60,288,794          111,920          111,388           532            0
+ 87     83,679,119          121,952          121,404           548            0
+ 88     99,678,357          131,960          131,404           556            0
+99.58% (131,404B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->60.62% (80,000B) 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->22.73% (30,000B) 0x401E48: Matrix::GetSelectedCols(std::vector<int, std::allocator<int> >*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->07.58% (10,000B) 0x404DF6: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | | ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | |   
+| | ->07.58% (10,000B) 0x404E43: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | | ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | |   
+| | ->07.58% (10,000B) 0x404E90: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |     
+| ->15.16% (20,000B) 0x401F7F: MultiplyMatrices(Matrix*, Matrix*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->07.58% (10,000B) 0x404024: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | | ->07.58% (10,000B) 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | |   ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | |     
+| | ->07.58% (10,000B) 0x40404F: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   ->07.58% (10,000B) 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |     ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |       
+| ->07.58% (10,000B) 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   
+| ->07.58% (10,000B) 0x4023BB: MatrixTransposed(Matrix*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->07.58% (10,000B) 0x404009: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   ->07.58% (10,000B) 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |     ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |       
+| ->07.58% (10,000B) 0x4020F3: MatrixInverse(Matrix*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| | ->07.58% (10,000B) 0x404034: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |   ->07.58% (10,000B) 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |     ->07.58% (10,000B) 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| |       
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->28.85% (38,076B) 0x5738C54: monstartup (gmon.c:134)
+| ->28.85% (38,076B) 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   ->28.85% (38,076B) 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+|     
+->07.58% (10,000B) 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->07.58% (10,000B) 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+|   
+->01.82% (2,408B) 0x402CAC: Vector::Vector(int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+| ->01.82% (2,408B) in 15 places, all below massif's threshold (01.00%)
+|   
+->00.70% (920B) in 1+ places, all below ms_print's threshold (01.00%)
+

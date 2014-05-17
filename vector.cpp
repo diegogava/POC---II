@@ -9,7 +9,7 @@ using namespace std;
 
 }
 
- int Vector::GetSizeVector() const{
+ int Vector::GetSizeVector() {
 
      return n;
 
@@ -18,14 +18,14 @@ using namespace std;
 
  Vector::Vector(int size){
 
-    n = size;
+    this->n = size;
 
     int i;
 
-    v = (float*) malloc(sizeof(float)*n);
+    this->v = (float*) malloc(sizeof(float)*this->n);
 
-    for(i=0; i<n;i++){
-        v[i] = 0;
+    for(i=0; i<this->n;i++){
+        this->v[i] = 0;
     }
 
 }
@@ -42,12 +42,12 @@ using namespace std;
         exit(2);
     }
 
-    file >> n;
+    file >> this->n;
 
-    v = (float*) malloc(sizeof(float)*n);
+    this->v = (float*) malloc(sizeof(float)*this->n);
 
-    for(i=0; i<n;i++){
-        file >> v[i];
+    for(i=0; i<this->n;i++){
+        file >> this->v[i];
     }
 
     file.close();

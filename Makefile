@@ -2,6 +2,8 @@ CC = g++
 
 CFLAGS = -Wall -pg
 
+CFLAGS += -msse2
+
 RM = rm -f
 
 OBJS =  main.o matrix.o vector.o pls_sequential.o

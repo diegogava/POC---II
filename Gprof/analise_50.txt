@@ -3,11 +3,7 @@ Flat profile:
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
- 50.02      0.06     0.06                             PLS::MultiplyTransposeMatrixbyVector(Matriz*, Vetor*, Vetor*)
- 16.67      0.08     0.02                             PLS::MultiplyMatrixbyVector(Matriz*, Vetor*, Vetor*)
- 16.67      0.10     0.02                             Matriz::PegaNumeroLinhas() const
-  8.34      0.11     0.01                             MatrizInversa(Matriz*)
-  8.34      0.12     0.01                             Matriz::PegaNumeroColunas() const
+100.04      0.01     0.01                             Matrix::GetElementMatrix(int, int)
 
  %         the percentage of the total running time of the
 time       program used by this function.

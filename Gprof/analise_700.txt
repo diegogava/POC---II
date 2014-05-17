@@ -1,0 +1,54 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 42.13     20.15    20.15                             Matrix::GetElementMatrix(int, int)
+ 13.64     26.67     6.52                             PLS::MultiplyTransposeMatrixbyVector(Matrix*, Vector*, Vector*)
+ 10.31     31.60     4.93                             MultiplyMatrices(Matrix*, Matrix*)
+  7.66     35.26     3.66                             PLS::MultiplyMatrixbyVector(Matrix*, Vector*, Vector*)
+  6.67     38.45     3.19                             MatrixInverse(Matrix*)
+  6.38     41.50     3.05                             Matrix::SetElementMatrix(int, int, float)
+  4.79     43.80     2.29                             Matrix::GetNumberRows()
+  3.72     45.58     1.78                             PLS::SubtractFromMatrix(Matrix*, Vector*, Vector*)
+  2.99     47.01     1.43                             Matrix::GetNumberColumns()
+  1.09     47.53     0.52                             Matrix::~Matrix()
+  0.18     47.61     0.09                             Vector::GetElementVector(int)
+  0.15     47.68     0.07                             PLS::normaliz(Vector*, Vector*)
+  0.06     47.71     0.03                             PLS::MultiplyVectorTransposedbyVector(Vector*, Vector*)
+  0.06     47.74     0.03                             PLS::runpls(Matrix*, Vector*, int, char*, float, float)
+  0.04     47.76     0.02                             Matrix::Matrix(int, int)
+  0.04     47.78     0.02                             Vector::SetElementVector(int, float)
+  0.02     47.79     0.01                             MatrixTransposed(Matrix*)
+  0.02     47.80     0.01                             PLS::SubtractFromVector(Vector*, Vector*, float, float)
+  0.02     47.81     0.01                             PLS::MultiplyVectorandScalar(Vector*, float, Vector*)
+  0.02     47.82     0.01                             PLS::mean(Matrix*, Vector*)
+  0.02     47.83     0.01                             PLS::zscore(Matrix*, Vector*, Vector*)
+  0.01     47.84     0.01                             Vector::GetDataVector()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.

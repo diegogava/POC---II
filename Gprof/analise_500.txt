@@ -3,22 +3,24 @@ Flat profile:
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
- 24.08      5.18     5.18                             PLS::MultiplyTransposeMatrixbyVector(Matriz*, Vetor*, Vetor*)
- 22.17      9.95     4.77                             PLS::MultiplyMatrixbyVector(Matriz*, Vetor*, Vetor*)
- 19.36     14.12     4.17                             Matriz::PegaElementoMatriz(int, int)
- 11.04     16.50     2.38                             Matriz::AtribuiElementoMatriz(int, int, float)
-  7.76     18.17     1.67                             Matriz::PegaNumeroLinhas() const
-  5.67     19.39     1.22                             MultiplicaMatrizes(Matriz*, Matriz*)
-  4.46     20.35     0.96                             MatrizInversa(Matriz*)
-  2.42     20.87     0.52                             PLS::SubtractFromMatrix(Matriz*, Vetor*, Vetor*)
-  1.26     21.14     0.27                             Matriz::CopiaColuna(int)
-  1.07     21.37     0.23                             Matriz::~Matriz()
-  0.26     21.42     0.06                             Vetor::PegaElementoVetor(int)
-  0.23     21.47     0.05                             PLS::normaliz(Vetor*, Vetor*)
-  0.09     21.49     0.02                             PLS::runpls(Matriz*, Vetor*, int, char*, float, float)
-  0.07     21.51     0.02                             Vetor::PegaDadosVetor()
-  0.05     21.52     0.01                             Matriz::Matriz(int, int)
-  0.05     21.53     0.01                             Vetor::PegaTamanhoVetor() const
+ 41.58      7.05     7.05                             Matrix::GetElementMatrix(int, int)
+ 12.62      9.19     2.14                             PLS::MultiplyTransposeMatrixbyVector(Matrix*, Vector*, Vector*)
+  9.61     10.82     1.63                             MultiplyMatrices(Matrix*, Matrix*)
+  8.85     12.32     1.50                             PLS::MultiplyMatrixbyVector(Matrix*, Vector*, Vector*)
+  7.61     13.61     1.29                             MatrixInverse(Matrix*)
+  5.72     14.59     0.97                             Matrix::SetElementMatrix(int, int, float)
+  4.72     15.39     0.80                             PLS::SubtractFromMatrix(Matrix*, Vector*, Vector*)
+  4.66     16.18     0.79                             Matrix::GetNumberRows()
+  3.01     16.69     0.51                             Matrix::GetNumberColumns()
+  1.06     16.87     0.18                             Matrix::~Matrix()
+  0.12     16.89     0.02                             PLS::MultiplyVectorandScalar(Vector*, float, Vector*)
+  0.12     16.91     0.02                             PLS::runpls(Matrix*, Vector*, int, char*, float, float)
+  0.09     16.92     0.02                             Vector::SetElementVector(int, float)
+  0.06     16.93     0.01                             MatrixTransposed(Matrix*)
+  0.06     16.94     0.01                             PLS::normaliz(Vector*, Vector*)
+  0.06     16.95     0.01                             Matrix::GetColumn(int)
+  0.06     16.96     0.01                             Matrix::Matrix(int, int)
+  0.03     16.97     0.01                             Vector::SelectElements(std::vector<int, std::allocator<int> >*)
 
  %         the percentage of the total running time of the
 time       program used by this function.

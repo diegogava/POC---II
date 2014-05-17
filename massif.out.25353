@@ -1,0 +1,861 @@
+desc: (none)
+cmd: ./pls
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1359371
+mem_heap_B=38076
+mem_heap_extra_B=12
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1470022
+mem_heap_B=38092
+mem_heap_extra_B=20
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1514147
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=detailed
+n4: 56909 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 8192 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+  n1: 8192 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+   n1: 8192 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+    n1: 8192 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 8192 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n0: 641 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=4
+#-----------
+time=1624430
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1707313
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1824237
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1929897
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1999466
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2094033
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2209060
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2289719
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2398370
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=2503986
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2598771
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2697416
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=2765330
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2900552
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2983741
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3053785
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3152790
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3243382
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3357924
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3427615
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3542819
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=3680341
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3772684
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=3840650
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=3953695
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=4043684
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=4111598
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=4201897
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=detailed
+n4: 56852 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 8192 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+  n1: 8192 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+   n1: 8192 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+    n1: 8192 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 8192 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n0: 584 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=32
+#-----------
+time=4319598
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=4393643
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=4503785
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=4576275
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=4686261
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=4758460
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=4868247
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=4942097
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=5050422
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=5122827
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=5267077
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=detailed
+n4: 56852 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 8192 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+  n1: 8192 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+   n1: 8192 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+    n1: 8192 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 8192 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n0: 584 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=43
+#-----------
+time=5411580
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=5521548
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=5595458
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=5739492
+mem_heap_B=56909
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=5883963
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=5956546
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=6064930
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=6109881
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=6154947
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=6199859
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=6244944
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=6290041
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=6334855
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=6379788
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=6424676
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=detailed
+n4: 56852 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 8192 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+  n1: 8192 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+   n1: 8192 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+    n1: 8192 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 8192 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n0: 584 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=58
+#-----------
+time=6469881
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=6514799
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=6560016
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=6605063
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=6650269
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=6695137
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=6740409
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=6785335
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=6830128
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=6875144
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=detailed
+n4: 56852 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 8192 0x4EE192A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+  n1: 8192 0x4EE284E: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+   n1: 8192 0x4EE3579: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17)
+    n1: 8192 0x4016BF: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 8192 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n0: 584 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=68
+#-----------
+time=6920073
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=6964949
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=7009889
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=7055160
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=7100269
+mem_heap_B=56852
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=7149754
+mem_heap_B=48660
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=7193941
+mem_heap_B=57125
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=7567541
+mem_heap_B=49052
+mem_heap_extra_B=140
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=7618178
+mem_heap_B=59108
+mem_heap_extra_B=228
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=7663284
+mem_heap_B=69124
+mem_heap_extra_B=244
+mem_stacks_B=0
+heap_tree=detailed
+n4: 69124 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n2: 20000 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x4043DE: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n0: 1048 in 16 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=78
+#-----------
+time=7708391
+mem_heap_B=79140
+mem_heap_extra_B=260
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=7753498
+mem_heap_B=89156
+mem_heap_extra_B=276
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=43352521
+mem_heap_B=91088
+mem_heap_extra_B=504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=43356446
+mem_heap_B=91096
+mem_heap_extra_B=520
+mem_stacks_B=0
+heap_tree=detailed
+n5: 91096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 40000 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x4043DE: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x404436: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x404464: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 2408 0x402CAC: Vector::Vector(int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 2408 in 14 places, all below massif's threshold (01.00%)
+ n0: 612 in 26 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=82
+#-----------
+time=43595683
+mem_heap_B=101356
+mem_heap_extra_B=508
+mem_stacks_B=0
+heap_tree=detailed
+n5: 101356 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 50000 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x4043DE: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x404436: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x404464: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x401E48: Matrix::GetSelectedCols(std::vector<int, std::allocator<int> >*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x404DF6: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 2408 0x402CAC: Vector::Vector(int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 2408 in 14 places, all below massif's threshold (01.00%)
+ n0: 872 in 27 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=83
+#-----------
+time=43826039
+mem_heap_B=91356
+mem_heap_extra_B=500
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=44056395
+mem_heap_B=91356
+mem_heap_extra_B=500
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=44289514
+mem_heap_B=101372
+mem_heap_extra_B=516
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=60288794
+mem_heap_B=111388
+mem_heap_extra_B=532
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=83679119
+mem_heap_B=121404
+mem_heap_extra_B=548
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=99678357
+mem_heap_B=131404
+mem_heap_extra_B=556
+mem_stacks_B=0
+heap_tree=peak
+n5: 131404 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 80000 0x401627: Matrix::Matrix(int, int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n3: 30000 0x401E48: Matrix::GetSelectedCols(std::vector<int, std::allocator<int> >*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x404DF6: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x404E43: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x404E90: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n2: 20000 0x401F7F: MultiplyMatrices(Matrix*, Matrix*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x404024: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n1: 10000 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x40404F: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n1: 10000 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x40440C: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x4023BB: MatrixTransposed(Matrix*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x404009: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n1: 10000 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n1: 10000 0x4020F3: MatrixInverse(Matrix*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n1: 10000 0x404034: PLS::ComputeWstar() (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+    n1: 10000 0x404F1F: PLS::runpls(Matrix*, Vector*, int, char*, float, float) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+     n0: 10000 0x4014F0: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 38076 0x5738C54: monstartup (gmon.c:134)
+  n1: 38076 0x40136F: __gmon_start__ (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+   n0: 38076 0x4C28270: ??? (in /usr/lib/valgrind/vgpreload_massif-amd64-linux.so)
+ n1: 10000 0x401753: Matrix::Matrix(char*) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 10000 0x401486: main (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+ n1: 2408 0x402CAC: Vector::Vector(int) (in /home/diegogava/Documents/PERIODO_FINAL/POC_2/pls_diego_sequencial/pls)
+  n0: 2408 in 15 places, all below massif's threshold (01.00%)
+ n0: 920 in 31 places, all below massif's threshold (01.00%)

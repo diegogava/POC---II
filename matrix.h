@@ -16,19 +16,21 @@ using namespace std;
 class Matrix {
 
 public:
+
+
 /* Metodos */
-Matrix(int row,int col);
-Matrix(char * filename);
+Matrix(int r,int c);
+Matrix(char *filename);
 ~Matrix();
 
-int	 GetNumberRows() const;
-int	 GetNumberColumns() const;
+int	 GetNumberRows();
+int	 GetNumberColumns();
 
 float GetElementMatrix(int i,int j);
-float SetElementMatrix(int i, int j, float element);
 float* GetDataMatrix();
 float* GetColumn(int index);
 
+void SetElementMatrix(int i, int j, float element);
 void PrintScreenMatrix();
 void PrintFileMatrix(char* filename);
 
@@ -52,7 +54,6 @@ Matrix* MatrixInverse(Matrix *matrix);
 
 /* Calcula a matriz transposta. */
 Matrix *MatrixTransposed(Matrix *m);
-
 
 // dot product when n is not multiple of 4
 float DotProductSSENotMultof4(float *v, float *v2, int n);
